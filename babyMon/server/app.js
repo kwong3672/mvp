@@ -5,6 +5,10 @@ var fs = Promise.promisifyAll(require('fs'));
 var _ = require('underscore');
 var mongoose = require('mongoose');
 
+
+var init = require('./javascripts/init.js');
+
+
 var port = 3000;
 app.use(express.static(__dirname + '/public'));
 // app.use('/static', express.static(__dirname + '/public'));
@@ -17,3 +21,4 @@ app.listen(port, function() {
   console.log('Server running on port: ', port);
 });
 
+init.initialize();
