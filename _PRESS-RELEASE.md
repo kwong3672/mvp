@@ -18,27 +18,37 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  Infant Health Monitor
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  For parents of newborn or small infants who want to ensure their children are growing properly.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  App that will allow you to keep track of your childs growth and development.  Know how your child compares to others of their age.
+  Track your child's growth and monitor their daily necessities.
 
 ## Problem ##
   > Describe the problem your product solves.
+  Allows parents to know how their children are growing without having to wait for their next doctor's appointment.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  This app keeps track of your child's measurements and daily activities.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  If you've ever wanted to know how your child is developing this app is for you.  Know if your child's habit's might be having a negative impact on their development.
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  To get started simply go enter in your child's information.  
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  After seeing that was falling behind others of his age, I was able to call his pediatrian and work out a plan for how to get him back on track.
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  For more information go to WHO or CDC. 
