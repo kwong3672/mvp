@@ -9,8 +9,8 @@
   Gender
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" ng-Click="genderSelection('boy')">Boy</a>
-    <a class="dropdown-item" ng-Click="genderSelection('girl')">Girl</a>
+    <a class="dropdown-item" ng-Click="genderSelect('boy')">Boy</a>
+    <a class="dropdown-item" ng-Click="genderSelect('girl')">Girl</a>
 </div>
 
 <div class="btn-group">
@@ -18,7 +18,33 @@
     Age in Months
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" ng-Repeat="age in ageRange" ng-Click="ageSelection(age)"> {{age}} </a>
+    <a class="dropdown-item" ng-Repeat="age in ageRange" ng-Click="ageSelect(age)"> {{age}} </a>
   </div>
 </div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Weight in lbs
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" ng-Repeat="weight in weightRange" ng-Click="weightSelect(weight)"> {{weight}} </a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Height in Inches
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" ng-Repeat="height in heightRange" ng-Click="heightSelect(height)"> {{height}} </a>
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<button type="button" class="btn btn-primary">Get Baby Data</button>
+
+
+
+
 

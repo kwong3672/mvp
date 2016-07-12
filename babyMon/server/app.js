@@ -12,6 +12,8 @@ var init = require('./javascripts/init.js');
 
 var port = 3000;
 app.use(express.static(__dirname + '/public'));
+
+app.use(express.static('../client/app'));
 // app.use('/static', express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
