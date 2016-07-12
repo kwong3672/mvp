@@ -1,3 +1,8 @@
+// file used to initialize the database collections with the data from a txt file.
+// Created this before figured out that I would not be able to access all three of the
+// models created using this file.  Run using node.
+
+
 var Promise = require('bluebird');
 var fs = Promise.promisifyAll(require('fs'));
 var _ = require('underscore');

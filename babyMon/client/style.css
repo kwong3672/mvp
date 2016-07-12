@@ -1,36 +1,47 @@
+
 .nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #78dbec;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #78dbec;
 }
 
 .nav li {
-    float: left;
+  float: left;
 }
 
 .nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .nav a:hover:not(.active) {
-    background-color: #074550;
+  background-color: #074550;
 }
 
 .nav .active {
-background-color:#4CAF50;
+  background-color:#4CAF50;
 }
 
 .childInfo {
-    padding: 50px, 50px, 50px, 50px;
+  padding: 50px, 50px, 50px, 50px;
 }
 
+.btn-primary, .btn-warning, .btn-danger {
+  width: 200px;
+}
 
+input {
+  margin-right: 20px;
+  margin-left: 20px;
+}
 
+.container {
+  margin: 30px;
+}
 
 

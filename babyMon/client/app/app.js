@@ -1,17 +1,25 @@
-var app = angular.module('babyMon', ['ngRoute', 'userInput'])
+var app = angular.module('babyMon', ['ngRoute', 'userInput', 'meals', 'sleep'])
 
   .config(function ($routeProvider, $httpProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'app/userInput/userInput.html',
-        controller: 'UserInputController',
+        controller: 'UserInputController'
       })
-      // .when('/signup', {
-      //   templateUrl: 'app/auth/signup.html',
-      //   controller: 'AuthController',
-      // })    
-      .otherwise({
-        templateUrl: 'app/',
-        controller: 'LinksController',
-      }); 
+      .when('/meals/', {
+        templateUrl: 'app/meals/meals.html',
+        controller: 'MealsController'
+      })
+      .when('/sleep/', {
+        templateUrl: 'app/sleep/sleep.html',
+        controller: 'SleepController'
+      })
+      .when('/other/', {
+        templateUrl: 'app/userInput/userInput.html',
+        controller: 'UserInputController'
+      });
+      // .otherwise({
+      //   templateUrl: 'app/userInput/userInput.html',
+      //   controller: 'UserInputController'
+      // }); 
   });
