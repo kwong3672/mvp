@@ -13,6 +13,6 @@ angular.module('userInput', [])
 
     $scope.ageSelection = function(age) {
       console.log('age has been selected: ', age);
-      $scope.displayAge = 'Age: ' + age;
+      $scope.displayAge = 'Age (months): ' + age;
     }
   });

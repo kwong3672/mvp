@@ -5,22 +5,20 @@
 <br>
 
 <div class="btn-group">
-  <div>
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Gender
-    </button>
-    <div class="dropdown-menu1">
-      <a class="dropdown-item" ng-Click="genderSelection('boy')">Boy</a>
-      <a class="dropdown-item" ng-Click="genderSelection('girl')">Girl</a>
-    </div>
-  </div>
-  
-  <div>
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Age in Months
-    </button>
-    <div class="dropdown-menu2">
-      <a class="dropdown-item" ng-Repeat="age in ageRange" ng-Click="ageSelection(age)"> {{age}} </a>
-    </div>
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Gender
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" ng-Click="genderSelection('boy')">Boy</a>
+    <a class="dropdown-item" ng-Click="genderSelection('girl')">Girl</a>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Age in Months
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" ng-Repeat="age in ageRange" ng-Click="ageSelection(age)"> {{age}} </a>
   </div>
 </div>
+
