@@ -15,7 +15,6 @@ fs.readFile(__dirname + '/../GrowthTables/boysLengthForAge.txt', 'utf8', functio
     data = data.split('\n');
     resultsArray = _.map(data, function(row) {
       var rows = row.split(' ');
-      // console.log(rows);
       return rows;
     });
     mongoose.connect('mongodb://localhost/MVP');
