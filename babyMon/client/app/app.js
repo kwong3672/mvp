@@ -1,4 +1,4 @@
-var app = angular.module('babyMon', ['ngRoute', 'userInput', 'meals', 'sleep'])
+var app = angular.module('babyMon', ['ngRoute', 'userInput'])
 
   .config(function ($routeProvider, $httpProvider) {
     $routeProvider
