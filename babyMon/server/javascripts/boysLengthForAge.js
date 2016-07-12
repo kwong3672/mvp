@@ -46,7 +46,7 @@ var findPercentile = function(data, columnName, height) {
   
 var querydb = function(query, height) {
   var result;
-  boysLengthForAge.findOne(query).exec()
+  return boysLengthForAge.findOne(query).exec()
   .then(function(data) {
     console.log('in querydb');
     var columnName = ['Month', '2nd', '5th', '10th', '25th', '50th', '75th', '90th', '95th', '98th'];
@@ -56,10 +56,9 @@ var querydb = function(query, height) {
     }
     console.log(valArray);
     result = findPercentile(valArray, columnName, height);
-    console.log('line 59 of who cares', result);
+    return result;
   });
-  console.log('line 61 ', result);
-  return result;
+
 };
 
 

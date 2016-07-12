@@ -38,10 +38,17 @@
 input {
   margin-right: 20px;
   margin-left: 20px;
+  width = 250px;
 }
 
 .container {
   margin: 30px;
 }
+
+.resultInput {
+  width: 300px;
+}
+
+
 
 

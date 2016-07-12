@@ -46,16 +46,18 @@
 <br>
 <br>
 <br>
-<div>
-  <button type="button" class="btn btn-primary" ng-Click="getData()">Get Height for Age Data</button><input>
-</div>
-<br>
-<div>
-  <button type="button" class="btn btn-warning" ng-Click="getData()">Get Weight for Age Data</button><input>
-</div>
-<br>
-<div>
-  <button type="button" class="btn btn-danger" ng-Click="getData()">Get Weight for Height Data</button><input>
+<div class="results">
+  <div>
+    <button type="button" class="btn btn-primary" ng-Click="getDataHeightByAge(heightByAge)">Get Height for Age Data</button><input ng-model="heightByAge" class="resultInput">
+  </div>
+  <br>
+  <div>
+    <button type="button" class="btn btn-warning" ng-Click="getData()">Get Weight for Age Data</button><input class="resultInput">
+  </div>
+  <br>
+  <div>
+    <button type="button" class="btn btn-danger" ng-Click="getData()">Get Weight for Height Data</button><input class="resultInput">
+  </div>
 </div>
 
 

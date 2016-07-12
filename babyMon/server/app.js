@@ -30,9 +30,12 @@ app.post('/boysLengthForAge/', function(req, res) {
   // values found only were in cm, need to convert to inches
   var height = req.body.height * 2.54;
   console.log(height, ' height');
-  var result = boysLengthForAge.querydb({Month: age}, height);
-  console.log('result of app.js line 34', result);
-  res.send({name: 'api'});
+  boysLengthForAge.querydb({Month: age}, height).then(function (data) {
+    console.log('result of app.js line 34', data);
+    res.send(data);
+  });
+  
+  // res.send({name: 'api'});
 });
 
 app.post('/boysWeightForAge/', function(req, res) {

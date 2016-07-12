@@ -42,10 +42,8 @@ angular.module('userInput', [])
       measurements.height = height;
     };
 
-    $scope.getData = function() {
-      console.log('Get Data has been clicked');
-
-      console.log(measurements);
+    var getHeightByAgeResult = '';
+    $scope.getDataHeightByAge = function(heightByAge) {
 
       var stringified = JSON.stringify(measurements);
 
@@ -53,14 +51,16 @@ angular.module('userInput', [])
         url: 'http://127.0.0.1:3000/boysLengthForAge/',
         method: 'POST',
         contentType: 'application/json',
-        dataType: 'json',
         data: stringified,
-        success: function(data) {
-          console.log('success', data);
+        success: function(res) {
+          getHeightByAgeResult = res;
         },
         error: function(error) {
-          console.log('error', error);
+          console.log('error line 62', error);
+          console.log('this is the error object', error.responseText);
         }
+
       });
+      $scope.heightByAge = getHeightByAgeResult;
     };
   });
