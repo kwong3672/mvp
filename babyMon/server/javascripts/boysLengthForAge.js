@@ -4,6 +4,7 @@ var fs = require('fs');
 var _ = require('underscore');
 var mongoose = require('mongoose');
 
+
 var resultsArray = [];
 var boysLengthForAge;
     
@@ -25,11 +26,12 @@ fs.readFile(__dirname + '/../GrowthTables/boysLengthForAge.txt', 'utf8', functio
       schema[value] = 'Number';
     });
 
-
     var boysLengthForAgeSchema = new mongoose.Schema(schema);
     boysLengthForAge = mongoose.model('boysLengthForAge', boysLengthForAgeSchema);
   }
 });
+
+
 var findPercentile = function(data, columnName, height) {
   console.log('in findPercentile');
   var index = 0;

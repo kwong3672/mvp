@@ -9,6 +9,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var boysLengthForAge = require('./javascripts/boysLengthForAge.js');
+var boysWeightForAge = require('./javascripts/boysWeightForAge.js');
 
 
 // var init = require('./javascripts/init.js');
@@ -29,24 +30,34 @@ app.post('/boysLengthForAge/', function(req, res) {
   var age = req.body.age;
   // values found only were in cm, need to convert to inches
   var height = req.body.height * 2.54;
-  console.log(height, ' height');
-  boysLengthForAge.querydb({Month: age}, height).then(function (data) {
-    console.log('result of app.js line 34', data);
+  boysLengthForAge.querydb({Month: age}, height).then(function(data) {
     res.send(data);
   });
-  
-  // res.send({name: 'api'});
 });
 
 app.post('/boysWeightForAge/', function(req, res) {
-
+  var age = req.body.age;
+  // convert weight from kg to lbs
+  var weight = req.body.weight * 0.453592;
+  boysWeightForAge.querydb({Month: age}, weight).then(function(data) {
+    res.send(data);
+  });
 });
 
-app.post('/boysWeightForLength/', function(req, res) {
-
-});
+// app.post('/boysWeightForLength/', function(req, res) {
+//   var length = req.body.length * 2.54;
+//   // convert weight from kg to lbs
+//   var weight = req.body.weight * 0.453592;
+//   boysWeightForAge.querydb({Length: }, weight).then(function(data) {
+//     res.send(data);
+//   });
+// });
 
 app.post('/meals/', function(req, res) {
+
+});
+
+app.get('/meals/', function(req, res) {
 
 });
 

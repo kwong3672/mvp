@@ -63,4 +63,50 @@ angular.module('userInput', [])
       });
       $scope.heightByAge = getHeightByAgeResult;
     };
+
+    var getWeightByAgeResult = '';
+    $scope.getDataWeightByAge = function(weightByAge) {
+
+      var stringified = JSON.stringify(measurements);
+
+      $.ajax({
+        url: 'http://127.0.0.1:3000/boysWeightForAge/',
+        method: 'POST',
+        contentType: 'application/json',
+        data: stringified,
+        success: function(res) {
+          getWeightByAgeResult = res;
+        },
+        error: function(error) {
+          console.log('error line 62', error);
+          console.log('this is the error object', error);
+        }
+
+      });
+      $scope.weightByAge = getWeightByAgeResult;
+    };
+
+    // var getWeightByLengthResult = '';
+    // $scope.getDataWeightByLength = function(weightByLength) {
+
+    //   var stringified = JSON.stringify(measurements);
+
+    //   $.ajax({
+    //     url: 'http://127.0.0.1:3000/boysWeightForLength/',
+    //     method: 'POST',
+    //     contentType: 'application/json',
+    //     data: stringified,
+    //     success: function(res) {
+    //       getWeightByLengthResult = res;
+    //     },
+    //     error: function(error) {
+    //       console.log('error line 62', error);
+    //       console.log('this is the error object', error);
+    //     }
+
+    //   });
+    //   $scope.weightByLength = getWeightByLengthResult;
+    // };
+
+
   });
